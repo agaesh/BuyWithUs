@@ -12,9 +12,9 @@
             {
                 $data = [
                     'product_name' => $_POST['product_name'],
-                    'description' => $_POST['description'],
+                    'product_description' => $_POST['product_description'],
                     'quantity' => $_POST['quantity'],
-                    'price' => $_POST['price'],
+                    'unit_price' => $_POST['unit_price'],
                     'remark' => $_POST['remark']
                 ];
                 $productController = new ProductController();
