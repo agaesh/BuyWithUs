@@ -1,6 +1,6 @@
 <?php
     require("../database.php");
-    require("../produtModel.php");
+    require("./productModel.php");
 
    class ProductController extends Database{
     private $db = null;
