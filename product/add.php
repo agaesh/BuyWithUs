@@ -25,9 +25,9 @@
     ?>
     <form method = "POST">
         <input type="text" name="product_name" placeholder="Enter Product Name">
-        <input type="text" name = "description" placeholder = "Enter Product Descrption">
+        <input type="text" name = "product_description" placeholder = "Enter Product Descrption">
         <input type="text" name = "quantity" placeholder = "Quantity">
-        <input type="text" name = "price" placeholder = "Price">
+        <input type="text" name = "unit_price" placeholder = "Price">
         <textarea name="remark" name = "submit" id="">
         </textarea>
         <input type="submit" value="Add Product">
