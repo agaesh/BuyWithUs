@@ -18,7 +18,7 @@
                     'remark' => $_POST['remark']
                 ];
                 $productController = new ProductController();
-                $productController->addProduct($data);
+                $insert = $productController->addProduct($data);
             }
                 
         }
