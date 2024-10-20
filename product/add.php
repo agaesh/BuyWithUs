@@ -17,7 +17,8 @@
                     'price' => $_POST['price'],
                     'remark' => $_POST['remark']
                 ];
-                
+                $productController = new ProductController();
+                $productController->addProduct($data);
             }
                 
         }
