@@ -4,7 +4,7 @@
     private $db = 'commerce';
     private $user = 'root';
     private $pass = '';
-    private $conn;
+    public $conn;
 
 
     public function __construct(){
