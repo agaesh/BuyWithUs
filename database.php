@@ -8,14 +8,15 @@
 
 
     public function __construct(){
-         $this->ConnectToDatabase();
+         $this->conn = $this->ConnectToDatabase();
     }
     public function ConnectToDatabase(){
-        $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->db);
+        $conn = new mysqli($this->host, $this->user, $this->pass, $this->db);
         
         if($this->conn === true){
             echo "Database Connected Succefully";
         }
+       return $conn;
     }
   }
 
