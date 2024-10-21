@@ -28,6 +28,17 @@
         <input type="text" name = "product_description" placeholder = "Enter Product Descrption">
         <input type="text" name = "quantity" placeholder = "Quantity">
         <input type="text" name = "unit_price" placeholder = "Price">
+        
+        <select name="measurement" id="measurement">
+            <option value="kg">Kilogram (KG)</option>
+            <option value="g">Gram (G)</option>
+            <option value="lb">Pound (LB)</option>
+            <option value="oz">Ounce (OZ)</option>
+            <option value="litre">Litre (L)</option>
+            <option value="ml">Millilitre (ML)</option>
+        </select>
+
+        <input type ="hidden" name = "company_code" placeholder = "company_code">
         <textarea name="remark" name = "submit" id="">
         </textarea>
         <input type="submit" value="Add Product">
