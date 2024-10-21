@@ -1,0 +1,2 @@
+1. The main objective of the add.php inside the add.php in product is to update the Small bussiness product listing. 
+2. BuyWithUs e-commerce platform actually didnt have inventory system to track and maintain the stock code. We just created a simple listing what they going to sell
