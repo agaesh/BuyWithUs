@@ -15,7 +15,8 @@
                     'product_description' => $_POST['product_description'],
                     'quantity' => $_POST['quantity'],
                     'unit_price' => $_POST['unit_price'],
-                    'remark' => $_POST['remark']
+                    'remark' => $_POST['remark'],
+                    'image'=>$_FILES['image']['name']
                 ];
                 $productController = new ProductController();
                 $insert = $productController->addProduct($data);
