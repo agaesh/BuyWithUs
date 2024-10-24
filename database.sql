@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS products (
     created_by VARCHAR(255) NOT NULL,
     created_date DATETIME DEFAULT CURRENT_TIMESTAMP,
     availability ENUM ('IN-STOCK','OUT-OF-STOCK','PRE-ORDER') NOT NULL DEFAULT 'IN-STOCK' 
+    company_id INTEGER(2O)
     type VARCHAR(255)
 );
 
