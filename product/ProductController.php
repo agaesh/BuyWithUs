@@ -17,10 +17,7 @@
             $columns = implode(", ", array_keys($data));
             $values = implode("', '", array_values($data));
             $sql = "INSERT INTO products ($columns) VALUES ('$values')";
-            $productCode = $this->GenerateProductCode($data['product_name']);
             $stmt = $this->conn->prepare($sql);
-            $lastID = $stmt->insert_id;
-            
             if (!$stmt->execute()) {
                 throw new Exception("Failed to execute statement: " . $stmt->error);
             };
@@ -30,9 +27,8 @@
             $sql = "UPDATE products SET product_code = ? WHERE id = ?";
             $stmt = $this->conn->prepare($sql);
             
-            // Bind the parameters to the statement
-            $stmt->bind_param('si', $productCode, $lastID);
-            $updateProductCode = $stmt->execute();
+            $updateProductCode = $this->conn->prepare($sql)->bind_param("si",$productCode, $lastID);
+            return $updateProductCode;
         } catch (Exception $ex) {
             error_log($ex->getMessage());
             throw $ex; // Ensure it rethrows the exception after logging
