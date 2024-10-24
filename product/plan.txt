@@ -1,2 +1,14 @@
 1. The main objective of the add.php inside the add.php in product is to update the Small bussiness product listing. 
 2. BuyWithUs e-commerce platform actually didnt have inventory system to track and maintain the stock code. We just created a simple listing what they going to sell
+3. The add.php is actually a simple form to input the product information. The product information will
+    - currenly handled product added few fields and make it save into database include image. the only problem is 
+      after updateing generating the product code. and save it. old flow was inserting all the record.
+    
+
+Checklist
+1. need to upload all the information one shot from the product form including the generated product code
+   Completed Date:
+2. Updating the image path into database once sucessfully move the filed from original folder to dedicated file upload folder
+   Completed Date:
+3. Show Product Listing 
+Expected to finish : 25/10/2024

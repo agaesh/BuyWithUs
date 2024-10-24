@@ -24,6 +24,7 @@
             if (!$stmt->execute()) {
                 throw new Exception("Failed to execute statement: " . $stmt->error);
             };
+            $lastID = $stmt->insert_id;
   
             $productCode = $this->GenerateProductCode($data['product_name']);
             $sql = "UPDATE products SET product_code = ? WHERE id = ?";
@@ -31,7 +32,7 @@
             
             // Bind the parameters to the statement
             $stmt->bind_param('si', $productCode, $lastID);
-            return $stmt->execute();
+            $updateProductCode = $stmt->execute();
         } catch (Exception $ex) {
             error_log($ex->getMessage());
             throw $ex; // Ensure it rethrows the exception after logging
