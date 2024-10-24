@@ -20,7 +20,10 @@
                 $productController = new ProductController();
                 $insert = $productController->addProduct($data);
                 if($insert === true){
-                    $uploadImage = $productController->UploadImage($_FILES['image']);
+                    if($productController->UploadImage($_FILES['image'])){
+                        echo "Product Added Successfully";
+                        $productController->UpdateProduct($productController->uploadedImagePath, "image", $productController->lastRecordID);
+                    }
                 }
             }
                 

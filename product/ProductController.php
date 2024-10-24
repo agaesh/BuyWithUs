@@ -5,7 +5,8 @@
    class ProductController extends Database{
     private $db = null;
     private $productModel = null;
-
+    public $uploadedImagePath = null;
+    public $lastRecordID = null;
     public function __contruct(){
        $this->db = new Database();
        $this->productModel = new ProductModel();
