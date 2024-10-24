@@ -41,6 +41,28 @@
         $productCode = strtoupper((substr($productName, 0,4))) . $uniqueId;
         return $productCode;
     }
+    public function UploadImage($filePath){
+        try{
+           
+            $image = $filePath;
+            $target = $filePath['name'];
+            $directory = "../upload";
+            
+            if(isset($image) && $image['error'] == UPLOAD_ERR_OK){
+             $tmpFilePath= $image['tmp_name'];
+     
+            if(!is_dir($directory)){
+                mkdir(__DIR__ . '/' . $directory, 0755, true);
+            }
+     
+             $fullpath = __DIR__ . '/' . $directory . '/' . $target;
+             if(move_uploaded_file($tmpFilePath,$fullpath)){
+                 echo "File uploaded successfully to: " . $fullpath;
+             }
+        }
+    }catch(Exception $x){
+           echo "Error" . $x->getMessage();
+    }
    }
 
 ?>
