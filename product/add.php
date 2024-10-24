@@ -26,7 +26,8 @@
                 
         }
     ?>
-    <form method = "POST">
+    <form method = "POST" enctype="multipart/form-data">
+        <input type="file" name = "image" accept=".jpeg, .jpg, .png"/>
         <input type="text" name="product_name" placeholder="Enter Product Name">
         <input type="text" name = "product_description" placeholder = "Enter Product Descrption">
         <input type="text" name = "quantity" placeholder = "Quantity">
