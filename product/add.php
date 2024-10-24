@@ -20,6 +20,9 @@
                 ];
                 $productController = new ProductController();
                 $insert = $productController->addProduct($data);
+                if($insert === true){
+                    $uploadImage = $productController->UploadImage($_FILES['image']);
+                }
             }
                 
         }
