@@ -23,7 +23,7 @@
             
             if (!$stmt->execute()) {
                 throw new Exception("Failed to execute statement: " . $stmt->error);
-            }
+            };
   
             $productCode = $this->GenerateProductCode($data['product_name']);
             $sql = "UPDATE products SET product_code = ? WHERE id = ?";
