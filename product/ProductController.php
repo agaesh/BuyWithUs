@@ -56,9 +56,11 @@
                 mkdir(__DIR__ . '/' . $directory, 0755, true);
             }
      
-             $fullpath = __DIR__ . '/' . $directory . '/' . $target;
+            $fullpath = $directory. '/' .$target;
              if(move_uploaded_file($tmpFilePath,$fullpath)){
                  echo "File uploaded successfully to: " . $fullpath;
+                $this->uploadedImagePath = $fullpath;
+                return true;
              }
         }
     }catch(Exception $x){
