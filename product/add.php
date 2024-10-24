@@ -22,7 +22,7 @@
                 if($insert === true){
                     if($productController->UploadImage($_FILES['image'])){
                         echo "Product Added Successfully";
-                        $productController->UpdateProduct($productController->uploadedImagePath, "image", $productController->lastRecordID);
+                        $updateCode= $productController->UpdateProduct($productController->uploadedImagePath, "image", $productController->lastRecordID);
                     }
                 }
             }
