@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <?php
@@ -29,29 +30,55 @@
                         echo $updateProduct;
                     }
                 }
-            }
+            }     
         }
     ?>
-    <form method = "POST" enctype="multipart/form-data">
-        <input type="file" name = "image" accept=".jpeg, .jpg, .png"/>
-        <input type="text" name="product_name" placeholder="Enter Product Name">
-        <input type="text" name = "product_description" placeholder = "Enter Product Descrption">
-        <input type="text" name = "quantity" placeholder = "Quantity">
-        <input type="text" name = "unit_price" placeholder = "Price">
+    <div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <div class="row mb-3">
+                <input type="file" name="image" accept=".jpeg, .jpg, .png" class="form-control w-100">
+            </div>
+            <div class="row mb-3">
+                <label for="product_name" class="form-label">Product Name</label>
+                <input type="text" name="product_name" placeholder="Enter Product Name" class="form-control w-100">
+            </div>
+            <div class="row mb-3">
+                <label for="product_description" class="form-label">Product Description</label>
+                <input type="text" name="product_description" placeholder="Enter Product Description" class="form-control w-100">
+            </div>
+            <div class="row mb-3 d-flex align-items-center">
+                <div class="col">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="text" name="quantity" placeholder="Quantity" class="form-control w-100">
+                </div>
+                <div class="col">
+                    <label for="unit_price" class="form-label">Unit Price</label>
+                    <input type="text" name="unit_price" placeholder="Price" class="form-control w-100">
+                </div>
+                <div class="col">
+                    <label for="measurement" class="form-label">Measurement</label>
+                    <select name="measurement" id="measurement" class="form-control w-100">
+                        <option value="kg">Kilogram (KG)</option>
+                        <option value="g">Gram (G)</option>
+                        <option value="lb">Pound (LB)</option>
+                        <option value="oz">Ounce (OZ)</option>
+                        <option value="litre">Litre (L)</option>
+                        <option value="ml">Millilitre (ML)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" name="company_code">
+        <div class="row mb-3">
+            <label for="remark" class="form-label">Remark</label>
+            <textarea name="remark" class="form-control w-100"></textarea>
+        </div>
         
-        <select name="measurement" id="measurement">
-            <option value="kg">Kilogram (KG)</option>
-            <option value="g">Gram (G)</option>
-            <option value="lb">Pound (LB)</option>
-            <option value="oz">Ounce (OZ)</option>
-            <option value="litre">Litre (L)</option>
-            <option value="ml">Millilitre (ML)</option>
-        </select>
-
-        <input type ="hidden" name = "company_code" placeholder = "company_code">
-        <textarea name="remark" name = "submit" id="">
-        </textarea>
-        <input type="submit" value="Add Product">
-    </form>
+        <div class="d-flex ">
+            <input type="submit" value="Add Product" class="btn btn-primary m-1">
+            <input type="reset" value="Clear" class="btn btn-secondary m-1">
+        </form>
+</div>
 </body>
 </html>
