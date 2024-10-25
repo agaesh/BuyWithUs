@@ -21,7 +21,7 @@
             if (!$stmt->execute()) {
                 throw new Exception("Failed to execute statement: " . $stmt->error);
             };
-            $lastID = $stmt->insert_id;
+            $this->lastRecordID= $stmt->insert_id;
   
             $productCode = $this->GenerateProductCode($data['product_name']);
             $sql = "UPDATE products SET product_code = ? WHERE id = ?";
