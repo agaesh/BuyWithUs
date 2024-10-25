@@ -16,6 +16,7 @@
                     'quantity' => $_POST['quantity'],
                     'unit_price' => $_POST['unit_price'],
                     'remark' => $_POST['remark'],
+                    'measurement'=>$_POST['measurement']
                 ];
                 $productController = new ProductController();
                 $insert = $productController->addProduct($data);
