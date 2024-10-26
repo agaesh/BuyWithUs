@@ -34,6 +34,17 @@
             throw $ex; // Ensure it rethrows the exception after logging
         }
     }
+    public function UpdateProduct($value, $field, $id){
+        try{
+            
+          $sql = "UPDATE products SET  $field = ? WHERE id = ?";
+          $stmt= $this->conn->prepare($sql);
+          $stmt->bind_param("si", $value, $id);
+          return $stmt->execute();
+        }catch(Exception $ex){
+            throw new Exception("Error:". $ex->getMessage());
+        }
+    }
     private function GenerateProductCode($productName){
         $uniqueId = time();
         $productCode = strtoupper((substr($productName, 0,4))) . $uniqueId;
