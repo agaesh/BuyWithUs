@@ -115,7 +115,9 @@ $(document).ready(function() {
                 {
                 "data": null,
                 "render": function(data, type, row) {
-                    return '<button class="btn btn-warning" data-id="' + row.id + '">Edit</button>';
+                    var editBtn = '<button class="btn btn-warning" data-id="' + row.id + '">Edit</button>';
+                    var deleteBtn = '<button class="btn btn-danger" data-id="' + row.id + '">Delete</button>';
+                    return editBtn + ' ' + deleteBtn;
                 }
                 }]
         });
