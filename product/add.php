@@ -119,7 +119,8 @@ $(document).ready(function() {
                     var deleteBtn = '<button class="btn btn-danger" data-id="' + row.id + '">Delete</button>';
                     return editBtn + ' ' + deleteBtn;
                 }
-                }]
+                }
+]
         });
     } catch (error) {
         console.log(error);
