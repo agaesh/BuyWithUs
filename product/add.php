@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
 </head>
 <body>
     <?php
@@ -78,5 +79,49 @@
             <input type="reset" value="Clear" class="btn btn-secondary m-1">
         </form>
 </div>
+<div class="container">
+    <table id = "table">
+    <thead>
+            <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Product Description</th>
+                <th>Product Measurement</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+<script>
+$(document).ready(function() {
+    var companyID = 100; // Replace with the actual company ID variable or value
+    try {
+        $('#table').DataTable({
+            "ajax": {
+                "url": "http://localhost/BuyWithUs/api/show.php",
+                "method": "GET",
+                "dataSrc": "",
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "product_name" },
+                { "data": "product_description"},
+                { "data":"measurement"},
+                {
+                "data": null,
+                "render": function(data, type, row) {
+                    return '<button class="btn btn-warning" data-id="' + row.id + '">Edit</button>';
+                }
+                }]
+        });
+    } catch (error) {
+        console.log(error);
+    }
+});
+</script>
 </html>
