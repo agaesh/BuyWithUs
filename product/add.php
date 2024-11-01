@@ -122,6 +122,31 @@ $(document).ready(function() {
                 }
 ]
         });
+        // Use event delegation to attach the click event to dynamically created buttons
+        $('#table tbody').on('click', '.btn-danger', async function() {
+           var dataId = $(this).attr('data-id');
+           let message = confirm(`Are you sure you want to delete the record with ID ${dataId}?`);
+
+            if (message) {                       
+                $.ajax({
+                    url: "http://localhost/BuyWithUs/api/delete.php?id=" +dataId,
+                    method: "DELETE",
+
+                    success: function(response) {
+                        console.log(response.message);
+                        // Optionally, you can refresh the table to reflect the changes
+                        $('#table').DataTable().ajax.reload();
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("Error deleting record: " + error);
+                    }
+                });
+            } else {
+                // Deletion canceled
+                alert("Deletion canceled.");
+            }
+        });
+
     } catch (error) {
         console.log(error);
     }
