@@ -89,7 +89,7 @@
     <div class="container">
         <div style = "padding:10px;">
             <h2>Register Seller Account</h2>
-            <a href="" style = "margin:12px; padding:12px;">Use Mobile Number To Register</a>
+            <a href = "#" class = "mobileLink" style = "margin:12px; padding:12px;">Use Mobile Number To Register</a>
         </div>
         <form method = "POST">
             <input type="email" name="" id="" placeholder="Enter Your Email">
