@@ -67,6 +67,8 @@
             font-weight: bolder;
             background-color: gray;
         }
+    </style>
+</head>
 <body>
     <?php
       if(isset($_REQUEST['REQUEST_METHOD'])){
@@ -110,4 +112,30 @@
         </form>
     </div>
 </body>
+<script>
+    let mobileLogin= document.querySelector(".mobileLink");
+    mobileLogin.addEventListener("click",(e)=>{
+     e.preventDefault();
+     let panels = document.querySelectorAll(".panel");
+     let panel = panels[0];
+     let panel2 =panels[1];
+    panel.style.display = "none";
+    let mobileInput = document.createElement("input");
+
+    let role = document.querySelector("#role");
+
+    // Set the type attribute to "tel" for a mobile number
+    mobileInput.setAttribute("type", "tel");
+
+    // Optionally set other attributes
+    mobileInput.setAttribute("placeholder", "Enter your mobile number");
+    mobileInput.setAttribute("id", "mobile-input");
+    mobileInput.setAttribute("class", "mobile-input");
+    role.style.display = "none";
+
+    panel2.appendChild(mobileInput);
+    panel2.style.display = "flex";
+    panel2.style.flexDirection = "column";
+})
+</script>
 </html>
