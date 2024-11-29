@@ -16,7 +16,7 @@ body{
     margin: 0 2px;
 }
 input,select{
-    padding:8px;
+    padding: 10px;
     border:none;
     border-bottom:1px solid #ddd;
     outline:none;
