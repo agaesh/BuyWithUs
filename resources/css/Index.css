@@ -1,0 +1,133 @@
+*{
+    font-family: 'montserrat',sans-serif;
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    overflow: none;
+}
+body{
+    background-color: white;
+    overflow-y: scroll;  
+}
+.header nav a{
+    text-decoration: none;
+    color:white;
+    font-size:12px;
+    margin: 0 2px;
+}
+input,select{
+    padding:8px;
+    border:none;
+    border-bottom:1px solid #ddd;
+    outline:none;
+    width:100%;
+    font-size:12px;
+    margin:10px;
+    font-weight:300;
+}
+a{
+    font-size:12px;
+}
+input::placeholder{
+    font-size:12px;
+}
+.header{
+    width:100%;
+}
+.header nav{
+    display:flex;
+    flex-direction:Row;
+    justify-content: flex-start;
+    align-items: center;
+    padding:15px;
+    border-bottom:1px solid #ccc;
+    background-color: orangered;
+    color:white;
+}
+.header nav .logo h2{
+    font-size: 18px;
+    margin:0px 0px 0px 2px;
+}
+.header nav .menu-link {
+    display:inline-flex;
+    margin-left: auto;
+    min-width: 100px;
+}
+.header nav li{
+    list-style: none;
+}
+.form-container{
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width:100%;
+    /* max-width:800px; */
+    max-height:800px;
+    background-color: white;
+}
+.form-container div h2{
+    font-size: 12px;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    padding:24px;
+    height:100%;
+    background-color: white;
+    border-radius:8px;
+    align-self: center;
+    max-width:400px;
+    width:100%;
+}
+.form-container form h2{
+    font-size:20px; 
+    font-weight:400; 
+    padding:0; 
+    text-align:center;
+}
+.form-container .hero{
+  height:100%; max-width: 500px; width:100%; list-style:none;
+
+}
+.form-container .hero img{
+    width:100%;
+    height:100%;
+    color:white;
+    padding:10px;
+    border-radius:20px;
+}
+input[type = "submit"]{
+    background-color: orangered;
+    padding:12px;
+    color: white;
+    font-weight: bolder;
+    border-radius:20px;
+    margin-top:20px;
+}
+input[type = "submit"]:hover{
+    opacity: 0.7;
+    transition: all ease-in 0.2;
+}
+.social-button {
+
+    padding: 10px;
+   /* Facebook Blue */
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.facebook-button{
+    background-color: #1877F2;
+}
+.facebook-button:hover {
+    background-color: #145DBF; /* Darker Facebook Blue */
+}
