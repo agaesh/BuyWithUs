@@ -1,0 +1,37 @@
+
+.header{
+    width:100%;
+}
+.header nav{
+    display:flex;
+    flex-direction:Row;
+    justify-content: flex-start;
+    align-items: center;
+    padding:15px;
+    border-bottom:1px solid #ccc;
+    background-color: orangered;
+    color:white;
+}
+.header nav a{
+    text-decoration: none;
+    color:white;
+    font-size:12px;
+    margin: 0 2px;
+}
+.header nav .logo h2{
+    font-size: 18px;
+    margin:0px 0px 0px 2px;
+}
+.header nav .menu-link {
+    font-size:14px;
+    display:inline-flex;
+    margin-left: auto;
+    min-width: 100px;
+}
+.header nav .menu-link li a{
+    font-size:14px;
+    margin-right:4px;
+}
+.header nav li{
+    list-style: none;
+}
