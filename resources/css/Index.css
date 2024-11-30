@@ -9,14 +9,8 @@ body{
     background-color: white;
     overflow-y: scroll;  
 }
-.header nav a{
-    text-decoration: none;
-    color:white;
-    font-size:12px;
-    margin: 0 2px;
-}
 input,select{
-    padding: 10px;
+    padding: 10px; 
     border:none;
     border-bottom:1px solid #ddd;
     outline:none;
@@ -31,31 +25,7 @@ a{
 input::placeholder{
     font-size:12px;
 }
-.header{
-    width:100%;
-}
-.header nav{
-    display:flex;
-    flex-direction:Row;
-    justify-content: flex-start;
-    align-items: center;
-    padding:15px;
-    border-bottom:1px solid #ccc;
-    background-color: orangered;
-    color:white;
-}
-.header nav .logo h2{
-    font-size: 18px;
-    margin:0px 0px 0px 2px;
-}
-.header nav .menu-link {
-    display:inline-flex;
-    margin-left: auto;
-    min-width: 100px;
-}
-.header nav li{
-    list-style: none;
-}
+
 .form-container{
     display:flex;
     flex-direction: row-reverse;
@@ -78,6 +48,7 @@ form{
     background-color: white;
     border-radius:8px;
     align-self: center;
+    justify-content: center;
     max-width:400px;
     width:100%;
 }
@@ -88,15 +59,18 @@ form{
     text-align:center;
 }
 .form-container .hero{
-  height:100%; max-width: 500px; width:100%; list-style:none;
-
+  height:100%;
+   max-width: 500px; 
+   width:100%; 
+   list-style:none; 
+   object-fit: cover; 
+   color: white;
+   position:relative;
 }
 .form-container .hero img{
     width:100%;
     height:100%;
     color:white;
-    padding:10px;
-    border-radius:20px;
 }
 input[type = "submit"]{
     background-color: orangered;
@@ -111,8 +85,7 @@ input[type = "submit"]:hover{
     transition: all ease-in 0.2;
 }
 .social-button {
-
-    padding: 10px;
+        padding: 10px;
    /* Facebook Blue */
     color: #fff;
     text-align: center;
@@ -130,4 +103,42 @@ input[type = "submit"]:hover{
 }
 .facebook-button:hover {
     background-color: #145DBF; /* Darker Facebook Blue */
+}
+.overlay{
+    padding:20px;
+    position:absolute; 
+    top:0; 
+    background:rgba(0,0,0,0.6); 
+    width:100%; height:100%;
+    animation: fadeIn 1s forwards;
+}
+.overlay .content{
+    padding:20px;
+    position:relative; 
+    top:100px;
+}
+.overlay .content h1{
+ font-size:40px;
+ margin-bottom:10px;
+}
+.overlay .content ul li {
+    margin:10px;
+    animation: slideDown 1s ease-out 1s forwards; 
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  } to{
+    opacity: 1;
+  }
+} 
+ @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
 }

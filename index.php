@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/navbar.css">
     <link rel="stylesheet" href="./resources/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
+    
 <body>
     <?php
       if(isset($_REQUEST['REQUEST_METHOD'])){
@@ -59,11 +62,18 @@
             class="img-fluid rounded-top"
             alt=""
            />
-           <p>Any individual or business can be a seller on BuyWithUs. You can sell</p>
-           <ul>
-            <li>Item</li>
-            <li>Item</li>
-           </ul>
+           <div class="overlay">
+            <div class = "content">
+                <h1>BuyWithUs</h1>
+                <p>Any individual or business can be a seller on BuyWithUs. You can sell</p>
+                <ul>
+                    <li>Business to Consumer (B2C): Businesses sell directly to individual consumers.</li>
+                    <li>Business to Business (B2B): Businesses sell products or services to other businesses.</li>
+                    <li>Consumer to Consumer (C2C): Consumers sell products or services to other consumers.</li>
+                    <li>Consumer to Business (C2B): Consumers provide products or services to businesses.</li>
+                </ul>
+             </div>             
+           </div>
         </div>
     </div>
 </body>
