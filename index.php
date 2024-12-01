@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/navbar.css">
     <link rel="stylesheet" href="./resources/css/index.css">
+    <link rel="stylesheet" href="./resources/css/GoogleButton.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail" />
     
 <body>
